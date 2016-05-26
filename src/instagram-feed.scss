@@ -1,0 +1,21 @@
+@import "mixins";
+
+$instagram-feed-images-per-row: 5 !default;
+
+.instagram-feed {
+
+}
+
+  .instagram-feed__loader {
+    @include spinner(#a6a6a6, 1em, 5em);
+  }
+
+  .instagram-feed__item {
+    @include image-grid-item($instagram-feed-images-per-row);
+
+    a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
